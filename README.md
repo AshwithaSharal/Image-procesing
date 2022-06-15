@@ -1,6 +1,7 @@
 # Image-procesing
 1) Develop a program to display grayscale image usinng read & write operation<br>
- import cv2<br>
+
+import cv2<br>
 img=cv2.imread('f1.jpg',0)<br>
 cv2.imshow('fl',img)<br>
 cv2.waitKey(0)<br>
