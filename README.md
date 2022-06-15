@@ -17,5 +17,6 @@ import matplotlib.pyplot as plt<br>
 image=cv2.imread('p1.jpg')<br>
 plt.imshow(image)<br>
 plt.show()<br>
+
 OUTPUT:<br>
 ![image](https://user-images.githubusercontent.com/98145023/173811644-3f36c483-6b49-4dfc-9ae9-76984bbe5848.png)
