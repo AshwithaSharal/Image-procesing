@@ -9,6 +9,12 @@ cv2.destroyAllWindows()<br>
 OUTPUT:<br>
 ![image](https://user-images.githubusercontent.com/98145023/173810741-3ee02157-785f-423a-bbeb-4f994d7bbaf9.png)<br>
 
+2) Develop a program to display the image using matplotlib<br>
 
-
-
+import cv2<br><br>
+import matplotlib.pyplot as plt<br>
+image=cv2.imread('p1.jpg')<br>
+plt.imshow(image)<br>
+plt.show()<br>
+OUTPUT:<br>
+![image](https://user-images.githubusercontent.com/98145023/173811644-3f36c483-6b49-4dfc-9ae9-76984bbe5848.png)
