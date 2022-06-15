@@ -44,7 +44,7 @@ from PIL import Image<br>
 img=Image.new('RGB',(200,40),(255,196,0))<br>
 img.show()<br>
 
-**OUTPUT:**
+**OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/98145023/173815051-8a0d2d36-f78a-46ae-a854-3b391466c711.png)<br><br>
 
 **6)Develop a program to visualize the image using varoius color spaces**<br>
