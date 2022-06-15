@@ -27,3 +27,60 @@ rotate_image1.show()<br>
 
 **OUTPUT:**<br>
 ![image](https://user-images.githubusercontent.com/98145023/173813582-9ea72447-8b38-4134-8b66-6860c6cbd754.png)<br>
+
+**4)Develop a program to convert color string to RGB color values**<br>
+from PIL import ImageColor<br>
+img1=ImageColor.getrgb("yellow")<br>
+print(img1)<br>
+img2=ImageColor.getrgb("brown")<br>
+print(img2)<br>
+
+**OUTPUT:**<br>
+(255, 255, 0)<br>
+(165, 42, 42)<br>
+
+**5)Write a program to create image using color**<br>
+from PIL import Image<br>
+img=Image.new('RGB',(200,40),(255,196,0))<br>
+img.show()<br>
+
+**OUTPUT:**
+![image](https://user-images.githubusercontent.com/98145023/173815051-8a0d2d36-f78a-46ae-a854-3b391466c711.png)<br>
+
+**6)Develop a program to visualize the image using varoius color spaces**<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+img=cv2.imread('b1.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+plt.imshow(img)<br>
+plt.show()<br>
+
+**OUTPUT:**<br>
+![image](https://user-images.githubusercontent.com/98145023/173815502-14d7f5a5-4369-4414-9b04-5baa5a0b37a6.png)<br>
+
+**7)Display the image attributes**<br>
+from PIL import Image<br>
+image=Image.open('b1.jpg')<br>
+print("Filename:",image.filename)<br>
+print("Format:",image.format)<br>
+print("Mode:",image.mode)<br>
+print("Size:",image.size)<br>
+print("Width:",image.width)<br>
+print("Height:",image.height)<br>
+image.close()<br>
+
+**OUTPUT:**<br>
+Filename: b1.jpg<br>
+Format: JPEG<br>
+Mode: RGB<br>
+Size: (1080, 1920)<br>
+Width: 1080<br>
+Height: 1920<br>
+import cv2<br>
+
