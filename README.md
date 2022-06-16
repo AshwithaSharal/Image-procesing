@@ -115,7 +115,7 @@ cv2.imshow('Resized imzge',imgresize)<br>
 print('Resized image length width',imgresize.shape)<br>
 cv2.waitKey(0)<br>
 
-**OUTPUT:**
+**OUTPUT:**<br>
 original image length width (1500, 1000, 3)<br>
 Resized image length width (160, 150, 3)<br>
 
