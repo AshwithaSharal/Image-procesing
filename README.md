@@ -84,3 +84,23 @@ Width: 1080<br>
 Height: 1920<br>
 import cv2<br><br>
 
+**8)Convert the original image to gray scale and then to binary**<br>
+import cv2<br>
+img=cv2.imread('p2.jpg')<br>
+cv2.imshow("RGB",img)<br>
+cv2.waitKey(0)<br><br>
+img=cv2.imread('p2.jpg',0)<br>
+cv2.imshow("Gray",img)<br>
+cv2.waitKey(0)<br><br>
+ret,bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
+cv2.imshow("Binary",bw_img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+
+**OUTPUT:**
+![image](https://user-images.githubusercontent.com/98145023/174037732-9d5a42af-9a0b-4b65-8487-47d263e3543f.png)<br>
+![image](https://user-images.githubusercontent.com/98145023/174037840-09af38de-119b-4730-bf6d-f7e044309251.png)<br>
+![image](https://user-images.githubusercontent.com/98145023/174037923-e35b050f-43d0-4f74-928c-bd87f74b5e7d.png)<br>
+
+
+
