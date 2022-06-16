@@ -103,4 +103,23 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/98145023/174037923-e35b050f-43d0-4f74-928c-bd87f74b5e7d.png)<br><br>
 
 
+**9)Resize the original image**<br>
+import cv2<br>
+img=cv2.imread('l5.jpg')<br>
+print('Original image length width',img.shape)<br>
+cv2.imshow('Origianl image',img)<br>
+cv2.waitKey(0)<br>
+
+imgresize=cv2.resize(img,(150,160))<br>
+cv2.imshow('Resized imzge',imgresize)<br>
+print('Resized image length width',imgresize.shape)<br>
+cv2.waitKey(0)<br>
+
+**OUTPUT:**
+original image length width (1500, 1000, 3)<br>
+Resized image length width (160, 150, 3)<br>
+
+![image](https://user-images.githubusercontent.com/98145023/174048116-7816da97-de2b-4364-aacb-e9208910f03c.png)<br>
+![image](https://user-images.githubusercontent.com/98145023/174048256-91e805b8-6a9b-4e89-9f3c-c96a97948a11.png)<br><br>
+
 
