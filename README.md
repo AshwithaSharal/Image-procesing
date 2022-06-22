@@ -123,8 +123,8 @@ Resized image length width (160, 150, 3)<br>
 ![image](https://user-images.githubusercontent.com/98145023/174048256-91e805b8-6a9b-4e89-9f3c-c96a97948a11.png)<br><br>
 
 
-**LAB EXERCISE**<br>
-**10)Develop a program to readimage using URL**<br>
+**LAB EXERCISE**<br><br>
+**1)Develop a program to readimage using URL**<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80'<br>
@@ -133,5 +133,54 @@ plt.imshow(image)<br>
 plt.show()<br>
 
 **OUTPUT**<br>
-![image](https://user-images.githubusercontent.com/98145023/175004843-72e5a221-7734-4aa4-a59d-9b1d02a7fa46.png)<br><br>
+![image](https://user-images.githubusercontent.com/98145023/175004843-72e5a221-7734-4aa4-a59d-9b1d02a7fa46.png)<br><br><br>
+
+
+**2)Develop a program to readiamge using URL**<br>
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('fish1.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/175014696-c3fca2e7-a812-468f-8ab4-642b8c4c1970.png)<br><br>
+
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+light_orange=(1,190,200)<br>
+dark_orange=(18,255,255)<br>
+mask=cv2.inRange(img,light_orange,dark_orange)<br>
+result=cv2.bitwise_and(img,img,mask=mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/175015016-5f81e112-16db-4449-8c82-13eff269e112.png)<br><br>
+
+light_white=(0,0,200)<br>
+dark_white=(145,60,255)<br>
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
+result_white=cv2.bitwise_and(img,img,mask=mask_white)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask_white,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result_white)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/175015187-a606f1bb-4e38-4242-988b-be444186301b.png)<br><br>
+
+blur=cv2.GaussianBlur(final_result,(7,7),0)<br>
+plt.imshow(blur)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/175015383-58bc7480-ab13-48a3-9369-62d9428b0218.png)<br><br>
+
+
+
 
