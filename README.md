@@ -123,3 +123,15 @@ Resized image length width (160, 150, 3)<br>
 ![image](https://user-images.githubusercontent.com/98145023/174048256-91e805b8-6a9b-4e89-9f3c-c96a97948a11.png)<br><br>
 
 
+**LAB EXERCISE**<br>
+**10)Develop a program to readimage using URL**<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+url='https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80'<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br>
+
+**OUTPUT**
+![image](https://user-images.githubusercontent.com/98145023/175004843-72e5a221-7734-4aa4-a59d-9b1d02a7fa46.png)<br><br>
+
