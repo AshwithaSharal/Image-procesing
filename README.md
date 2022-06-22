@@ -210,7 +210,7 @@ plt.imshow(fimg4)<br>
 plt.show()<br>
 cv2.imwrite('output.jpeg',fimg4)<br><br>
 
-**OUTPUT**
+**OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/175022261-2f9d4754-031b-4ef1-84a6-43f244a14e0a.png)<br>
 ![image](https://user-images.githubusercontent.com/98145023/175022304-5fa9b1b9-6a58-457f-a11d-f55492599d81.png)<br>
 ![image](https://user-images.githubusercontent.com/98145023/175022398-874dedcd-89e9-4ad7-b004-46bd8a77eb97.png)<br>
