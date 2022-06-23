@@ -218,7 +218,7 @@ cv2.imwrite('output.jpeg',fimg4)<br><br>
 
 **4)Develop the program to change the image to different color spaces.**<br>
 import cv2<br>
-img=cv2.imread("E:\\b10.jpg")<br>
+img=cv2.imread('E:\\f1.jpg')<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
 hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
 lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
