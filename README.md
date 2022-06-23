@@ -232,7 +232,7 @@ cv2.imshow("YUV image",yuv)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br><br>
 
-**OUTPUT**<r>
+**OUTPUT**<br>
   ![image](https://user-images.githubusercontent.com/98145023/175273936-090217f0-8cd9-4aa1-a378-9b59941fee76.png)<br>
   ![image](https://user-images.githubusercontent.com/98145023/175274041-a761b56e-7665-4985-bead-eb5720737818.png)<br>
   ![image](https://user-images.githubusercontent.com/98145023/175274155-438f43cf-dc00-4585-bb8b-fcb838efd085.png)<br>
