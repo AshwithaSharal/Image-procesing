@@ -233,10 +233,10 @@ cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br><br>
 
 **OUTPUT**<br>
-  ![image](https://user-images.githubusercontent.com/98145023/175274944-ad3a26dd-ce05-4c03-bae9-8c625e9204f6.png)<br>
-  ![image](https://user-images.githubusercontent.com/98145023/175274041-a761b56e-7665-4985-bead-eb5720737818.png)<br>
-  ![image](https://user-images.githubusercontent.com/98145023/175274155-438f43cf-dc00-4585-bb8b-fcb838efd085.png)<br>
-  ![image](https://user-images.githubusercontent.com/98145023/175274271-22cd6c5c-4be6-4841-9313-ee5d52d65ae3.png)<br><br>
+![image](https://user-images.githubusercontent.com/98145023/175274944-ad3a26dd-ce05-4c03-bae9-8c625e9204f6.png)<br>
+![image](https://user-images.githubusercontent.com/98145023/175274041-a761b56e-7665-4985-bead-eb5720737818.png)<br>
+![image](https://user-images.githubusercontent.com/98145023/175274155-438f43cf-dc00-4585-bb8b-fcb838efd085.png)<br>
+![image](https://user-images.githubusercontent.com/98145023/175274271-22cd6c5c-4be6-4841-9313-ee5d52d65ae3.png)<br><br>
 
 
 **5)Program to create an image using 2D array**<br>
