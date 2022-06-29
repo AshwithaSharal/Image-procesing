@@ -249,7 +249,61 @@ array[:,100:]=[120,0,255]<br>
 img=Image.fromarray(array)<br>
 img.save('image1.png')<br>
 img.show()<br>
-c.waitKey(0)<br><br>
+cv2.waitKey(0)<br><br>
 
 **OUTPUT**<br>
-![image](https://user-images.githubusercontent.com/98145023/175280876-1b5dbfcd-ff19-4f36-a169-af7206f20688.png)<br>
+![image](https://user-images.githubusercontent.com/98145023/175280876-1b5dbfcd-ff19-4f36-a169-af7206f20688.png)<br><br>
+
+**6)Program on images using binary operation**<br>
+**With different images**<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+img1=cv2.imread('f2n.jpg')<br>
+img2=cv2.imread('f3n.jpg')<br>
+ax=plt.subplots(figsize=(15,10))<br>
+bitwiseAnd=cv2.bitwise_and(img1,img2)<br>
+bitwiseOr=cv2.bitwise_or(img1,img2)<br>
+bitwiseXor=cv2.bitwise_xor(img1,img2)<br>
+bitwiseNot_img1=cv2.bitwise_not(img1)<br>
+bitwiseNot_img2=cv2.bitwise_not(img2)<br>
+plt.subplot(151)<br>
+plt.imshow(bitwiseAnd)<br>
+plt.subplot(152)<br>
+plt.imshow(bitwiseOr)<br>
+plt.subplot(153)<br>
+plt.imshow(bitwiseXor)<br>
+plt.subplot(154)<br>
+plt.imshow(bitwiseNot_img1)<br>
+plt.subplot(155)<br>
+plt.imshow(bitwiseNot_img2)<br>
+cv2.waitKey(0)<br><br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/176405160-ab95d63e-c1f9-4381-9245-0f11b3c9295e.png)<br><br>
+
+**With same image**<br>
+import cv2import cv2<br>
+import matplotlib.pyplot as plt<br>
+img1=cv2.imread('f2n.jpg',1)<br>
+img2=cv2.imread('f2n.jpg')<br>
+ax=plt.subplots(figsize=(15,10))<br>
+bitwiseAnd=cv2.bitwise_and(img1,img2)<br>
+bitwiseOr=cv2.bitwise_or(img1,img2)<br>
+bitwiseXor=cv2.bitwise_xor(img1,img2)<br>
+bitwiseNot_img1=cv2.bitwise_not(img1)<br>
+bitwiseNot_img2=cv2.bitwise_not(img2)<br>
+plt.subplot(151)<br>
+plt.imshow(bitwiseAnd)<br>
+plt.subplot(152)<br>
+plt.imshow(bitwiseOr)<br>
+plt.subplot(153)<br>
+plt.imshow(bitwiseXor)<br>
+plt.subplot(154)<br>
+plt.imshow(bitwiseNot_img1)<br>
+plt.subplot(155)<br>
+plt.imshow(bitwiseNot_img2)<br>
+cv2.waitKey(0)<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/176405805-1ba3e267-36b8-42fe-80c2-b61372cdaa4f.png)<br><br>
+
