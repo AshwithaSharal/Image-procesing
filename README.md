@@ -331,7 +331,7 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/98145023/176421703-c7d66080-1e9e-423b-97d9-9993124bd5d4.png)<br><br>
 
 
-**Morphology**<br>
+**8)Morphology**<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -359,7 +359,7 @@ cv2.waitKey(0)<br><br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/176425914-12e7f603-cab3-4b2c-9f48-04935f688413.png)<br><br>
 
-**Image Enhancement**<br>
+**9)Image Enhancement**<br>
   from PIL import Image<br>
 from PIL import ImageEnhance<br>
 image=Image.open('f1.jpg')<br>
@@ -388,7 +388,7 @@ image_sharped.show()<br><br>
 ![image](https://user-images.githubusercontent.com/98145023/178703690-76007080-5d41-4ab8-befd-f0e4e3055d62.png)
 ![image](https://user-images.githubusercontent.com/98145023/178703828-82d4afe5-8dba-495a-bd8f-b84f606ddfcf.png)<br><br>
 
-**GrayScale operation**<br>
+**10)GrayScale operation**<br>
 import cv2<br>
 OriginalImg=cv2.imread('nnnn1.jpg')<br>
 GrayImg=cv2.imread('nnnn1.jpg',0)<br>
@@ -406,7 +406,7 @@ if isSaved:<br>
 ![image](https://user-images.githubusercontent.com/98145023/178706776-dae9876a-deb3-4a65-9b57-cffbd6c67db1.png)<br>
 ![image](https://user-images.githubusercontent.com/98145023/178718134-2969b7d5-3da8-4d46-942a-43003433cb05.png)<br><br>
 
-**Slicing without bachground**<br>
+**11)Slicing without bachground**<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -427,7 +427,7 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/178710159-7edfcb70-3fa0-4dd2-977e-e35420583c02.png)<br><br>
 
-**Slicing without bachground**<br>
+**12)Slicing without bachground**<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
