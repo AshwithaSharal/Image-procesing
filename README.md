@@ -386,7 +386,27 @@ image_sharped.show()<br><br>
 ![image](https://user-images.githubusercontent.com/98145023/178703397-189e823e-1e36-4e6c-acfc-09e5a8fd8ca2.png)
 ![image](https://user-images.githubusercontent.com/98145023/178703533-e8fae6e7-4096-4a55-9ccc-23c0b09263ba.png)
 ![image](https://user-images.githubusercontent.com/98145023/178703690-76007080-5d41-4ab8-befd-f0e4e3055d62.png)
-![image](https://user-images.githubusercontent.com/98145023/178703828-82d4afe5-8dba-495a-bd8f-b84f606ddfcf.png)
+![image](https://user-images.githubusercontent.com/98145023/178703828-82d4afe5-8dba-495a-bd8f-b84f606ddfcf.png)<br><br>
+
+**GrayScale operation**<br>
+import cv2<br>
+OriginalImg=cv2.imread('nnnn1.jpg')<br>
+GrayImg=cv2.imread('nnnn1.jpg',0)<br>
+isSaved=cv2.imwrite('‪‪E:/i.jpg',GrayImg)<br>
+cv2.imshow('Display Original Image',OriginalImg)<br>
+cv2.imshow('Display Grayscale Image',GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+if isSaved:<br>
+    print('The image is successfully saved.')<br><br>
+    
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/178706649-bf6d7e8e-6f40-43e8-bdef-51ed60d89ead.png)<br>
+![image](https://user-images.githubusercontent.com/98145023/178706776-dae9876a-deb3-4a65-9b57-cffbd6c67db1.png)<br><br>
+
+
+    
+
 
 
 
