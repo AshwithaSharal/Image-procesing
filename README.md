@@ -403,7 +403,7 @@ if isSaved:<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/178717997-70748699-0d54-4a80-9bde-518747187857.png)<br>
 ![image](https://user-images.githubusercontent.com/98145023/178706649-bf6d7e8e-6f40-43e8-bdef-51ed60d89ead.png)<br>
-![image](https://user-images.githubusercontent.com/98145023/178706776-dae9876a-deb3-4a65-9b57-cffbd6c67db1.png)
+![image](https://user-images.githubusercontent.com/98145023/178706776-dae9876a-deb3-4a65-9b57-cffbd6c67db1.png)<br>
 ![image](https://user-images.githubusercontent.com/98145023/178718134-2969b7d5-3da8-4d46-942a-43003433cb05.png)<br><br>
 
 **Slicing without bachground**<br>
