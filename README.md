@@ -425,8 +425,26 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/178710159-7edfcb70-3fa0-4dd2-977e-e35420583c02.png)<br><br>
 
-    
+**Slicing without bachground**<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('nnnn1.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if (image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+                z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing w/o bachground')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>    
 
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/178711993-faa7aee7-9b5a-422e-85e2-c0d38eff53c7.png)<br><br>
 
 
 
