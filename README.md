@@ -495,3 +495,18 @@ plt.show()<br>
 
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/178964462-fabd114f-49c7-49eb-a99a-48535c351819.png)<br><br>
+
+from matplotlib import pyplot as plt<br>
+import numpy as np<br>
+fig,ax = plt.subplots(1,1)<br>
+a = np.array([22,87,5,43,56,73,55,54,11,20,51,5,79,31,27])<br>
+ax.hist(a, bins = [0,25,50,75,100])<br>
+ax.set_title("histogram of result")<br>
+ax.set_xticks([0,25,50,75,100])<br>
+ax.set_xlabel('marks')<br>
+ax.set_ylabel('no. of students')<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/178965952-028834d7-c1d7-4828-8fcc-5ffbabd9e335.png)<br><br>
+
