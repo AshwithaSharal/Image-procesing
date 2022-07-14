@@ -479,3 +479,19 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/178963570-016d9e1e-1296-4879-8c36-739eefdf8624.png)<br><br>
 
+**RGB**<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+image = io.imread('f2.jpg')<br>
+
+ax= plt.hist(image.ravel(), bins = 256, color = 'orange', )<br>
+ax= plt.hist(image[:, :, 0].ravel(), bins = 256, color = 'red', alpha = 0.5)<br>
+_= plt.hist(image[:, :, 1].ravel(), bins = 256, color = 'Green', alpha = 0.5)<br>
+_ = plt.hist(image[:, :, 2].ravel(), bins = 256, color = 'Blue', alpha = 0.5)<br>
+ax = plt.xlabel('Intensity Value')<br>
+ax = plt.ylabel('Count')<br>
+_ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/178964462-fabd114f-49c7-49eb-a99a-48535c351819.png)<br><br>
