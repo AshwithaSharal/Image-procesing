@@ -449,5 +449,33 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145023/178711993-faa7aee7-9b5a-422e-85e2-c0d38eff53c7.png)<br><br>
 
 
+**13)Histogram**<br>
+**Numpy**<br>
+import numpy as np<br>
+import cv2 as cv<br>
+from matplotlib import pyplot as plt<br>
+img = cv.imread('f2.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img = cv.imread('f2.jpg',0)<br>
+plt.hist(img.ravel(),256,[0,256]);<br>
+plt.show()<br>
 
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/178962658-fd9de21e-6736-4fb8-990d-147dfd67b42a.png)<br><br>
+
+**Skimage**<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+img = io.imread('f2.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+_ = plt.xlabel('Intensity Value')<br>
+_ = plt.ylabel('Count') <br>
+image = io.imread('f2.jpg')<br>
+ax = plt.hist(image.ravel(), bins = 256)<br>
+plt.show()<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/178963570-016d9e1e-1296-4879-8c36-739eefdf8624.png)<br><br>
 
