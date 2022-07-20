@@ -608,5 +608,8 @@ plt.show()<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/179965346-fab4d3ce-cddb-4c93-b96b-46787fbbe57d.png)<br><br>
 
+**JUST FOR REFERENCE**
+![image](https://user-images.githubusercontent.com/98145023/179965994-afc93db2-e48a-4a42-a9ec-35607f8b3a7b.png)<br><br>
+
 
 
