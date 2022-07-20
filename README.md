@@ -524,12 +524,18 @@ warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)<br>
 pic=imageio.imread('f2.jpg')<br>
 plt.figure(figsize=(6,6))<br>
 plt.imshow(pic);<br>
-plt.axis('off');<br><br>
+plt.axis('off');<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/179960486-a9580f5c-5746-4b78-887e-f77edc82b4f7.png)<br><br>
 
 negative=255-pic<br>
 plt.figure(figsize=(6,6))<br>
 plt.imshow(negative);<br>
-plt.axis('off');<br><br>
+plt.axis('off');<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/179960583-7f1afb49-3a88-4fc5-bbd5-675e7b5e64b5.png)<br><br>
 
 %matplotlib inline<br>
 import imageio<br>
@@ -543,7 +549,11 @@ def log_transform():<br>
     return(255/np.log(1+max_))*np.log(1+gray)<br>
 plt.figure(figsize=(5,5))<br>
 plt.imshow(log_transform(),cmap=plt.get_cmap(name="gray"))<br>
-plt.axis("off");<br><br>
+plt.axis("off");<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/179960756-cc1fd8c5-b640-4b65-b9a7-f4e02c963b2c.png)<br><br>
+
 
 import imageio<br>
 import matplotlib.pyplot as plt<br>
@@ -552,4 +562,8 @@ gamma=0.2<br>
 gamma_correction=((pic/255)**(1/gamma))<br>
 plt.figure(figsize=(5,5,))<br>
 plt.imshow(gamma_correction)<br>
-plt.axis('off');<br><br>
+plt.axis('off');<br>
+
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/179960876-12d6e967-c95e-4084-8749-44924d925fe6.png)<br><br>
+
