@@ -567,3 +567,46 @@ plt.axis('off');<br>
 **OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/179960876-12d6e967-c95e-4084-8749-44924d925fe6.png)<br><br>
 
+**15)Program to perform basic image manipulation**<br>
+**a)Sharpness**<br>
+**b)Flipping**<br>
+**c)Cropping**<br>
+
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+my_image=Image.open('f2.jpg')<br>
+sharp=my_image.filter(ImageFilter.SHARPEN)<br>
+sharp.save('D:/image_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/179965170-95bddceb-a977-4df0-8842-c91982df0cf2.png)<br><br>
+
+
+import matplotlib.pyplot as plt<br>
+img=Image.open('f2.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
+flip.save('D:/image_flip.jpg')<br>
+plt.imshow(flip)<br>
+plt.show()<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/179965247-6d8f4256-eb99-459d-9d03-aec14c8aee66.png)<br><br>
+
+
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('f2.jpg')<br>
+width,height=im.size<br>
+im1=im.crop((280,100,800,600))<br>
+im1.show()<br>
+plt.imshow(im1)<br>
+plt.show()<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/179965346-fab4d3ce-cddb-4c93-b96b-46787fbbe57d.png)<br><br>
+
+
+
