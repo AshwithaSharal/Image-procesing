@@ -659,7 +659,6 @@ plt.show()<br>
 **ASSIGNMENT**<br><br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
-
 arr = np.zeros((256,256,3), dtype=np.uint8)<br>
 imgsize = arr.shape[:2]<br>
 innerColor = (0,0,0)<br>
@@ -668,17 +667,14 @@ for y in range(imgsize[1]):<br>
     for x in range(imgsize[0]):<br>
         #Find the distance to the center<br>
         distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
-
         #Make it on a scale from 0 to 1innerColor<br>
         distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
-
-        #Calculate r, g, and b values<br>
+#Calculate r, g, and b values<br>
         r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
         g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
         b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
         # print r, g, b<br>
         arr[y, x] = (int(r), int(g), int(b))<br>
-
 plt.imshow(arr, cmap='gray')<br>
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145023/181449368-3880728c-45fc-4878-9766-c1b79b435ee3.png)<br><br>
@@ -741,14 +737,14 @@ min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,
 print(min_channels)<br><br>
 ![image](https://user-images.githubusercontent.com/98145023/181450792-4aab9251-74d4-4ac9-928a-16eab4b99f15.png)<br><br>
 
-# Python3 program for printing<br>
-# the rectangular pattern<br>
-# Function to print the pattern<br>
+#Python3 program for printing<br>
+#the rectangular pattern<br>
+#Function to print the pattern<br>
 def printPattern(n):<br>
      arraySize = n * 2 - 1;<br>
     result = [[0 for x in range(arraySize)]<br>
                  for y in range(arraySize)];<br>
- # Fill the values<br>
+ #Fill the values<br>
     for i in range(arraySize):<br>
         for j in range(arraySize):<br>
             if(abs(i - (arraySize // 2)) ><br>
@@ -756,13 +752,13 @@ def printPattern(n):<br>
                 result[i][j] = abs(i - (arraySize // 2));<br>
             else:<br>
                 result[i][j] = abs(j - (arraySize // 2));<br>
-  # Print the array<br>
+  #Print the array<br>
     for i in range(arraySize):<br>
         for j in range(arraySize):<br>
             print(result[i][j], end = " ");<br>
         print("");<br>
  
-# Driver Code<br>
+#Driver Code<br>
 n = 4;<br>
 printPattern(n);<br>
 ![image](https://user-images.githubusercontent.com/98145023/181451251-bd62758b-34cc-4651-af1b-f91278ea4529.png)<br><br>
