@@ -656,3 +656,124 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145023/180202688-83fa697d-d2b5-4abe-948b-a5f5b341e949.png)<br><br>
 
 
+**ASSIGNMENT**<br><br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+
+arr = np.zeros((256,256,3), dtype=np.uint8)<br>
+imgsize = arr.shape[:2]<br>
+innerColor = (0,0,0)<br>
+outerColor = (255, 255, 255)<br>
+for y in range(imgsize[1]):<br>
+    for x in range(imgsize[0]):<br>
+        #Find the distance to the center<br>
+        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
+
+        #Make it on a scale from 0 to 1innerColor<br>
+        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
+
+        #Calculate r, g, and b values<br>
+        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
+        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
+        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
+        # print r, g, b<br>
+        arr[y, x] = (int(r), int(g), int(b))<br>
+
+plt.imshow(arr, cmap='gray')<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145023/181449368-3880728c-45fc-4878-9766-c1b79b435ee3.png)<br><br>
+
+from PIL import Image<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+w, h = 100, 100<br>
+data = np. zeros((h, w, 3), dtype=np. uint8)<br>
+data[0:50,0:50] = [66, 66, 125]<br>
+data[20:60,20:60]=[25,55,100]<br>
+data[40:70,40:70]=[56,78,89]<br>
+data[60:80,60:80]=[22,52,29]<br>
+data[70:80,70:80]=[22,16,13]<br>
+img = Image. fromarray(data, 'RGB')<br>
+img. save('my.png')<br>
+img. show()<br>
+plt.imshow(img)<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145023/181449602-b82af50b-ce6f-4eae-89d4-3b14ef09402c.png)<br><br>
+
+**#Average**<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread("f2.jpg")<br>
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.imshow(img)<br>
+np.average(img)<br>
+![image](https://user-images.githubusercontent.com/98145023/181449982-7fbff3d3-a62d-4521-ba71-1b717754d676.png)<br><br>
+
+**#SD**<br>
+from PIL import Image,ImageStat<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('f2.jpg')<br>
+plt.imshow(im)<br>
+plt.show()<br>
+stat=ImageStat.Stat(im)<br>
+print(stat.stddev)<br>
+![image](https://user-images.githubusercontent.com/98145023/181450243-88d02351-e57b-41f3-9959-0e3a680d295b.png)<br><br>
+
+**#Max**<br>
+import cv2<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('f2.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])<br>
+print(max_channels)<br>
+![image](https://user-images.githubusercontent.com/98145023/181450444-447cbbd6-9a7b-4b1a-ace4-339197637177.png)<br><br>
+
+**#Min**<br>
+import cv2<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+img=cv2.imread('f2.jpg' )<br>
+plt.imshow(img)<br>
+plt.show()<br>
+min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])<br>
+print(min_channels)<br><br>
+![image](https://user-images.githubusercontent.com/98145023/181450792-4aab9251-74d4-4ac9-928a-16eab4b99f15.png)<br><br>
+
+# Python3 program for printing<br>
+# the rectangular pattern<br>
+# Function to print the pattern<br>
+def printPattern(n):<br>
+     arraySize = n * 2 - 1;<br>
+    result = [[0 for x in range(arraySize)]<br>
+                 for y in range(arraySize)];<br>
+ # Fill the values<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            if(abs(i - (arraySize // 2)) ><br>
+               abs(j - (arraySize // 2))):<br>
+                result[i][j] = abs(i - (arraySize // 2));<br>
+            else:<br>
+                result[i][j] = abs(j - (arraySize // 2));<br>
+  # Print the array<br>
+    for i in range(arraySize):<br>
+        for j in range(arraySize):<br>
+            print(result[i][j], end = " ");<br>
+        print("");<br>
+ 
+# Driver Code<br>
+n = 4;<br>
+printPattern(n);<br>
+![image](https://user-images.githubusercontent.com/98145023/181451251-bd62758b-34cc-4651-af1b-f91278ea4529.png)<br><br>
+
+import matplotlib.pyplot as plt<br>
+M =    ([2, 2, 2, 2, 2],  <br>
+        [2, 1, 1, 1, 2],  <br>
+        [2, 1, 0, 1, 2],  <br>
+        [2, 1, 1, 1, 2],<br>
+        [2, 2, 2, 2, 2])  <br>
+plt.imshow(M,cmap='Blues')<br>
+plt.show()<br>
+![image](https://user-images.githubusercontent.com/98145023/181451544-9ac69639-4a53-4091-8e0b-10416060fe11.png)<br><br>
+
