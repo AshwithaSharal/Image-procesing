@@ -611,6 +611,8 @@ plt.show()<br>
 **JUST FOR REFERENCE**<br>
 ![image](https://user-images.githubusercontent.com/98145023/179965994-afc93db2-e48a-4a42-a9ec-35607f8b3a7b.png)<br><br>
 
+
+**ASSIGNMENT**<br><br>
 **IMAGE MATRIX**<br>
 from PIL import Image<br>
 import numpy as np<br>
@@ -656,45 +658,7 @@ plt.show()<br>
 ![image](https://user-images.githubusercontent.com/98145023/180202688-83fa697d-d2b5-4abe-948b-a5f5b341e949.png)<br><br>
 
 
-**ASSIGNMENT**<br><br>
-import numpy as np<br>
-import matplotlib.pyplot as plt<br>
-arr = np.zeros((256,256,3), dtype=np.uint8)<br>
-imgsize = arr.shape[:2]<br>
-innerColor = (0,0,0)<br>
-outerColor = (255, 255, 255)<br>
-for y in range(imgsize[1]):<br>
-    for x in range(imgsize[0]):<br>
-        #Find the distance to the center<br>
-        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)<br>
-        #Make it on a scale from 0 to 1innerColor<br>
-        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)<br>
-#Calculate r, g, and b values<br>
-        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)<br>
-        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)<br>
-        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)<br>
-        # print r, g, b<br>
-        arr[y, x] = (int(r), int(g), int(b))<br>
-plt.imshow(arr, cmap='gray')<br>
-plt.show()<br>
-![image](https://user-images.githubusercontent.com/98145023/181449368-3880728c-45fc-4878-9766-c1b79b435ee3.png)<br><br>
 
-from PIL import Image<br>
-import numpy as np<br>
-import matplotlib.pyplot as plt<br>
-w, h = 100, 100<br>
-data = np. zeros((h, w, 3), dtype=np. uint8)<br>
-data[0:50,0:50] = [66, 66, 125]<br>
-data[20:60,20:60]=[25,55,100]<br>
-data[40:70,40:70]=[56,78,89]<br>
-data[60:80,60:80]=[22,52,29]<br>
-data[70:80,70:80]=[22,16,13]<br>
-img = Image. fromarray(data, 'RGB')<br>
-img. save('my.png')<br>
-img. show()<br>
-plt.imshow(img)<br>
-plt.show()<br>
-![image](https://user-images.githubusercontent.com/98145023/181449602-b82af50b-ce6f-4eae-89d4-3b14ef09402c.png)<br><br>
 
 **#Average**<br>
 import cv2<br>
