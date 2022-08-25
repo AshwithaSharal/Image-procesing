@@ -828,9 +828,6 @@ invert = ImageChops.invert(greyscale)<br>
 #2.invert by subtraction<br>
 bg = Image.new('L', (256, 256), color=(255)) #create a new image with a solid white background <br>
 subt = ImageChops.subtract(bg, greyscale) #subtract image from background<br>
-**OUTPUT**<br>
-![image](https://user-images.githubusercontent.com/98145023/186653441-1bfd5148-c9c6-4b29-a4ae-634c5424e4df.png)<br><br>
-
 
 #3. rotate<br>
 rotate =subt.rotate(45) <br>
