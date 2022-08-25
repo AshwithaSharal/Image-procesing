@@ -777,6 +777,49 @@ cv2.destroyAllWindows()<br>
 ![image](https://user-images.githubusercontent.com/98145023/186406240-1af601de-eaef-402a-b1cf-bceb253b8b40.png)<br><br>
 
 
+**USING PILLOW FUNCTIONS**<br><br>
+
+from PIL import Image, ImageChops, ImageFilter <br>
+from matplotlib import pyplot as plt<br>
+#Create a PIL Image objects<br>
+x = Image.open("x.png")<br>
+o = Image.open("o.png")<br>
+#Find out attributes of Image Objects<br>
+print('size of the image: ', x.size, ' colour mode:', x.mode) <br>
+print('size of the image: ', o.size, ' colour mode:', o.mode)<br>
+#plot 2 images one besides the other <br>
+plt.subplot(121), plt.imshow(x)<br>
+plt.axis('off')<br>
+plt.subplot(122), plt.imshow(o)<br>
+plt.axis('off')<br>
+#multiply images<br>
+merged = ImageChops.multiply(x,o)<br>
+#adding 2 images <br>
+add = ImageChops.add(x,o)<br>
+#convert colour mode <br>
+greyscale = merged.convert('L') <br>
+greyscale<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/186651615-0a50295a-4119-4130-bea7-0285032f63dd.png)<br><br>
+
+image = merged<br>
+print('image size: ', <br>image.size,<br>
+'\ncolor mode: ', image.mode,<br>
+'\nimage width: ', image.width, '| also represented by: ',image.size[0], <br>
+'\nimage height: ',image.height, '| also represented by: ',image.size[1],)<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/186651961-94684c42-97c7-46f5-926d-2a115f3da769.png)<br><br>
+
+
+#mapping the pixels of the image so we can use them as coordinates<br>
+pixel = greyscale.load()<br>
+
+#a nested Loop to parse through all the pixels in the image<br>
+for row in range (greyscale.size[0]): <br>
+ for column in range(greyscale.size[1]):<br>
+    if pixel[row, column] != (255): <br>
+      pixel[row, column] = (0)<br>
+greyscale<br>
 
 
 
