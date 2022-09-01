@@ -1055,12 +1055,12 @@ b) **Edge detection schemes - the gradient (Sobel - first order derivatives) bas
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
-# Loading image<br>
+#Loading image<br>
 #imge = cv2.imread('SanFrancisco.jpg',) <br>
 img0 = cv2.imread('kenny.jpeg',)<br>
 #converting to gray scale <br>
 gray = cv2.cvtColor(img0, cv2.COLOR_BGR2GRAY)<br>
-# remove noise<br>
+#remove noise<br>
 img = cv2.GaussianBlur (gray, (3,3),0)<br>
 #convolute with proper kernels<br>
 laplacian= cv2. Laplacian (img,cv2.CV_64F)<br> 
@@ -1075,7 +1075,7 @@ plt.title('Sobel x'), plt.xticks([]), plt.yticks([])<br>
 plt.subplot(2,2,4), plt.imshow(sobely,cmap = 'gray')<br>
 plt.title('Sobel Y'), plt.xticks([]), plt.yticks([])<br>
 plt.show()<br>
-
+**OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/187895010-6e43b2b0-0e51-4e1c-9aff-b96d890f1887.png)<br><br>
 
 **c)Edge detection using Prewitt operation**<br><br>
@@ -1097,7 +1097,7 @@ cv2.imshow("Prewitt y", img_prewitty)<br>
 cv2.imshow("Prewitt", img_prewittx + img_prewitty)<br>
 cv2.waitKey()<br>
 cv2.destroyAllWindows()<br>
-
+**OUTPUT**<br>
 ![image](https://user-images.githubusercontent.com/98145023/187895378-1996ad02-4c53-4bb5-aa4e-51ac74a9c27b.png)<br>
 ![image](https://user-images.githubusercontent.com/98145023/187895467-c263e2ef-21e2-4f2b-ae58-f083ca21261d.png)<br>
 ![image](https://user-images.githubusercontent.com/98145023/187895545-fe5827f0-716e-4fca-a82f-c0c7884bdd3a.png)<br>
@@ -1124,8 +1124,9 @@ cv2.imwrite("output.jpg",edged_img)<br>
 cv2.imshow("OutputImage", edged_img)<br>
 cv2.waitKey()<br>
 cv2.destroyAllWindows()<br>
+**OUTPUT**<br>
+![image](https://user-images.githubusercontent.com/98145023/187895837-2df77deb-2de6-45d2-8a00-c8f8a94e1866.png)<br><br>
 
-![image](https://user-images.githubusercontent.com/98145023/187895837-2df77deb-2de6-45d2-8a00-c8f8a94e1866.png)<br>
 
 
 
